@@ -4,12 +4,39 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:kosichkin_1_pr"
+        ResizeMode="NoResize"
+        
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        
+        
+        
+        Title="MainWindow" Height="400" Width="400">
     <Grid>
-        <Button Content="Выход" Click="Exit_Click" HorizontalAlignment="Left" Margin="669,368,0,0" VerticalAlignment="Top" Width="98" Height="26"/>
-        <Button Content="О программе" Click="Info_Click" HorizontalAlignment="Left" Margin="669,337,0,0" VerticalAlignment="Top" Width="98" Height="26"/>
-        <Button Content="Решить" Click="Solve_Click" HorizontalAlignment="Left" Margin="669,306,0,0" VerticalAlignment="Top" Width="98" Height="26"/>
+        <Button Content="Выход" Click="Exit_Click" HorizontalAlignment="Left" Margin="41,191,0,0" VerticalAlignment="Top" Width="120" Height="26"/>
+        <Button Content="О программе" Click="Info_Click" HorizontalAlignment="Left" Margin="185,191,0,0" VerticalAlignment="Top" Width="131" Height="26"/>
+        <Button Content="Сумма"  HorizontalAlignment="Left" Margin="185,116,0,0" VerticalAlignment="Top" Width="131" Height="26" RenderTransformOrigin="0.478,-0.731"/>
+        <Button Content="Сгенерировать массив" Click="Mass_Click" HorizontalAlignment="Left" Margin="185,85,0,0" VerticalAlignment="Top" Width="131" Height="26" RenderTransformOrigin="0.478,-0.731"/>
+        <Button Content="Результат" HorizontalAlignment="Left" Margin="185,148,0,0" VerticalAlignment="Top" Width="131" Height="26" RenderTransformOrigin="0.478,-0.731"/>
+
+
+        <TextBox x:Name="Сумма" HorizontalAlignment="Left" Margin="41,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"  Height="26"/>
+        <TextBox x:Name="Сгенерированный_массив" HorizontalAlignment="Left" Margin="41,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="26"/>
+        <TextBox x:Name="Результат" HorizontalAlignment="Left" Margin="41,148,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="26"/>
+
+        <Menu Height="20" VerticalAlignment="Top">
+                
+            <MenuItem Header="Файл" Width="51">
+                        
+
+                <MenuItem Header="Сгенерировать массив" Click="" ></MenuItem>   
+                <MenuItem Header="Сумма" ></MenuItem>          
+                <MenuItem Header="Результат" ></MenuItem>      
+                <MenuItem Header="Выход" Click="Exit_Click" ></MenuItem>
+                    
+            </MenuItem>
+
+        </Menu>
+
 
     </Grid>
 </Window>
