@@ -10,7 +10,7 @@
         
         
         
-        Title="MainWindow" Height="400" Width="400">
+        Title="Практическая 1" Height="400" Width="400">
     <Grid>
         <Button Content="Выход" Click="Exit_Click" HorizontalAlignment="Left" Margin="41,191,0,0" VerticalAlignment="Top" Width="120" Height="26"/>
         <Button Content="О программе" Click="Info_Click" HorizontalAlignment="Left" Margin="185,191,0,0" VerticalAlignment="Top" Width="131" Height="26"/>
@@ -28,7 +28,7 @@
             <MenuItem Header="Файл" Width="51">
                         
 
-                <MenuItem Header="Сгенерировать массив" Click="" ></MenuItem>   
+                <MenuItem Header="Сгенерировать массив" Click="Mass_Click" ></MenuItem>   
                 <MenuItem Header="Сумма" ></MenuItem>          
                 <MenuItem Header="Результат" ></MenuItem>      
                 <MenuItem Header="Выход" Click="Exit_Click" ></MenuItem>
