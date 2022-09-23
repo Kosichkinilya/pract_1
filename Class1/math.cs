@@ -3,17 +3,17 @@ using System.Windows.Navigation;
 
 namespace Lib_1
 {
-    public static class math
+    public static class Math
     {
-        public static int ArrayCreate(int[] numbers) // Генерируем массив но не выводим 
+        public static int[] Create_Click(int count = 10, int minValue = 0) // Генерируем массив но не выводим 
         {
-            Random rnd = new();
+            Random random = new();
+            int[] numbers = new int[count];
             for (int i = 0; i < numbers.Length; i++)
             {
-                numbers[i] = rnd.Next(-10, 2);
-
+                numbers[i] = random.Next(minValue, count);
             }
-            return numbers.Length;
+            return numbers;
         }
 
         public static double SignSquare(int[] numbers) // вычисляем корень и возводим в квадрат, но пока не выводим 
@@ -22,16 +22,18 @@ namespace Lib_1
             {
                 if (numbers[i] > 0)
                 {
-                    Math.Sqrt(numbers[i]);
+                    System.Math.Sqrt(numbers[i]);
 
                 }
 
                 if (numbers[i] < 0)
                 {
-                    Math.Pow(numbers[i], 2);
+                    System.Math.Pow(numbers[i], 2);
                 }
             }
             return numbers.Length;
+
+
         }   
 
     }
