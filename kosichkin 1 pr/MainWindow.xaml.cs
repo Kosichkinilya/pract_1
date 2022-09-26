@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Library_8;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -30,18 +31,18 @@ namespace kosichkin_1_pr
 
         private void Mass_Click(object sender, RoutedEventArgs e) // Генерируем массив 
         {
-           
+            Max_Value_Box.Clear();
+            numbers = MathString.Create(9, 4);
+            Mass_Created_Box.Text = string.Join(" ", numbers);
+            flag = true;
         }
 
-        private void SQRT_Click(object sender, RoutedEventArgs e) // квадратный корень 
+        private void MaxValue_Click(object sender, RoutedEventArgs e) //  
         {
-            
+            if (flag == true) Mass_Created_Box.Text = string.Join(" ", numbers.Max_Value_Box());
+            else MessageBox.Show("Необходмо создаь массив");
         }
 
-        private void POW_Click(object sender, RoutedEventArgs e) // возведенние в квадрат 
-        {
-
-        }
         private void Exit_Click(object sender, RoutedEventArgs e) //Выход
         {
             Close();
@@ -60,10 +61,7 @@ namespace kosichkin_1_pr
                 "\r\n В классе реализовать статический метод с именем Max.",
                 "\r\n Выполнил Косичкин Илья. Вариант 8");
 
-            // Сгенерировать массив заполненный случайными целыми числами, распределенных  диапазоне от -10 до 2.
-            // Вычислить для чисел > 0 извлечь корень, а для чисел < 0 возвести квадрат.
-            // На экран необходимо выводить сгенерированные числа и результат расчета
-            // функции на разных строках.В классе реализовать статический метод с именем SignSquare.
+          
 
         }
 

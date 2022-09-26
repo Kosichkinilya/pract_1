@@ -34,14 +34,14 @@
                 VerticalAlignment="Top"
                 Width="131" Height="26"/>
 
-        <Button Content="Вычислить корень"
+        <Button Content="Изменить Массив"
                 HorizontalAlignment="Left"
                 Margin="206,122,0,0" 
                 VerticalAlignment="Top"
                 Width="131" Height="26"
                 RenderTransformOrigin="0.478,-0.731"
-                Click="SQRT_Click"
-                ToolTip="Для чисел больше 0" 
+                Click="MaxValue_Click"
+                ToolTip="Находит максимальное значение" 
                 />
 
         <Button Content="Сгенерировать массив"
@@ -51,25 +51,31 @@
                 VerticalAlignment="Top"
                 Width="131" Height="26"
                 RenderTransformOrigin="0.478,-0.731"
-                ToolTip="Диапазон генерации от -10 до 2" 
+                ToolTip="Диапазон генерации от 0 до количества цифр в массиве" 
                 IsDefault="True"
                 />
 
-        <Button Content="Квадрат"
-                Click="POW_Click"
-                HorizontalAlignment="Left"
-                Margin="206,0,0,0" 
-                VerticalAlignment="Center"
-                Width="131" Height="26"
-                RenderTransformOrigin="0.478,-0.731"
-                ToolTip="Для чисел меньше 0"
-                />
 
 
-
-        <TextBox x:Name="SQRT" HorizontalAlignment="Left" Margin="62,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"  Height="26" IsEnabled="False"/>
-        <TextBox x:Name="Square" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" Height="26" Margin="62,0,0,0" IsEnabled="False"/>
-        <TextBox x:Name="Mass_created" HorizontalAlignment="Left" Margin="62,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="26" IsEnabled="False"/>
+        <TextBox x:Name="Max_Value_Box"
+                 IsReadOnly="True"
+                 ToolTip="Максимальное значение"
+                 HorizontalAlignment="Left"
+                 Margin="62,122,0,0"
+                 TextWrapping="Wrap"
+                 VerticalAlignment="Top"
+                 Width="120" 
+                 Height="26"/>
+        
+        <TextBox x:Name="Mass_Created_Box"
+                 IsReadOnly="True"
+                 ToolTip="Сгенерированный массив от 0 до количества цифр в массиве"
+                 HorizontalAlignment="Left" 
+                 Margin="62,72,0,0"
+                 TextWrapping="Wrap"
+                 VerticalAlignment="Top"
+                 Width="120"
+                 Height="26"/>
 
 
 
@@ -80,9 +86,9 @@
             <MenuItem Header="Файл" Width="51">
                         
 
-                <MenuItem Header="Сгенерировать массив" ToolTip="Диапазон генерации от -10 до 2" Click="Mass_Click" ></MenuItem>
+                <MenuItem Header="Сгенерировать массив" ToolTip="Диапазон генерации от -10 до 2" Click="Mass_Created_Box" ></MenuItem>
 
-                <MenuItem Header="Вычислить корень"   ToolTip="Для чисел больше 0" Click="SQRT_Click"></MenuItem> 
+                <MenuItem Header="Вычислить корень"   ToolTip="Для чисел больше 0" Click="MaxValue_Click"></MenuItem> 
                      
                 <MenuItem Header="Вычислить квадрат"  ToolTip="Для чисел меньше 0" Click="Mass_Click"></MenuItem>
 

@@ -1,11 +1,12 @@
 using System;
+using System.Linq;
 using System.Windows.Navigation;
 
-namespace Lib_1
+namespace Library_8
 {
-    public static class Math
+    public static class MathString
     {
-        public static int[] Create_Click(int count = 10, int minValue = 0) // Генерируем массив но не выводим 
+        public static int[] Mass_Click(int count = 10, int minValue = 0)
         {
             Random random = new();
             int[] numbers = new int[count];
@@ -14,27 +15,14 @@ namespace Lib_1
                 numbers[i] = random.Next(minValue, count);
             }
             return numbers;
+
         }
 
-        public static double SignSquare(int[] numbers) // вычисляем корень и возводим в квадрат, но пока не выводим 
+        public static int MaxValue(this int[] array)
         {
-            for (int i = 0; i < numbers.Length; i++)
-            {
-                if (numbers[i] > 0)
-                {
-                    System.Math.Sqrt(numbers[i]);
-
-                }
-
-                if (numbers[i] < 0)
-                {
-                    System.Math.Pow(numbers[i], 2);
-                }
-            }
-            return numbers.Length;
-
-
-        }   
+            int maxValue = array.Max();
+            return maxValue;
+        }
 
     }
 }
