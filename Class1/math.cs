@@ -6,7 +6,13 @@ namespace Library_8
 {
     public static class MathString
     {
-        public static int[] Mass_Click(int count = 10, int minValue = 0)
+        /// <summary>
+        /// Генерируем массив
+        /// </summary>
+        /// <param name="count"></param>
+        /// <param name="minValue"></param>
+        /// <returns></returns>
+        public static int[] Mass_Click(int count = 10, int minValue = 0) 
         {
             Random random = new();
             int[] numbers = new int[count];
@@ -18,11 +24,15 @@ namespace Library_8
 
         }
 
-        public static int MaxValue(this int[] array)
+        /// <summary>
+        /// Находим максимальное значение 
+        /// </summary>
+        /// <param name="array"></param>
+        /// <returns></returns>
+        public static int Max_Value_Box(this int[] array)
         {
             int maxValue = array.Max();
-            return maxValue;
+            return maxValue; 
         }
-
     }
 }

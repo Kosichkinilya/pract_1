@@ -9,7 +9,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Icon_info.png" />
+    <None Remove="meme.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Class1\Class1.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Icon_info.png" />
+    <Resource Include="meme.png" />
   </ItemGroup>
 
 </Project>

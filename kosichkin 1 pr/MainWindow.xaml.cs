@@ -31,15 +31,15 @@ namespace kosichkin_1_pr
 
         private void Mass_Click(object sender, RoutedEventArgs e) // Генерируем массив 
         {
-            Max_Value_Box.Clear();
-            numbers = MathString.Create(9, 4);
+
+            numbers = MathString.Mass_Click(10, 2);
             Mass_Created_Box.Text = string.Join(" ", numbers);
             flag = true;
         }
 
         private void MaxValue_Click(object sender, RoutedEventArgs e) //  
         {
-            if (flag == true) Mass_Created_Box.Text = string.Join(" ", numbers.Max_Value_Box());
+            if (flag == true) Mass_Changed_Box.Text = string.Join(" ", numbers.Max_Value_Box());
             else MessageBox.Show("Необходмо создаь массив");
         }
 
@@ -61,9 +61,14 @@ namespace kosichkin_1_pr
                 "\r\n В классе реализовать статический метод с именем Max.",
                 "\r\n Выполнил Косичкин Илья. Вариант 8");
 
-          
+
 
         }
 
+        private void Reset_Click(object sender, RoutedEventArgs e) // сброс тексбокса
+        {
+            Mass_Created_Box.Clear();
+            Mass_Changed_Box.Clear();
+        }
     }
 }
