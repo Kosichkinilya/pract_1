@@ -1,6 +1,5 @@
 using System;
 using System.Linq;
-using System.Windows.Navigation;
 
 namespace Library_8
 {
@@ -21,7 +20,6 @@ namespace Library_8
                 numbers[i] = random.Next(minValue, count);
             }
             return numbers;
-
         }
 
         /// <summary>

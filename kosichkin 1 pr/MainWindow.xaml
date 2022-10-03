@@ -84,7 +84,7 @@
             <MenuItem Header="Файл" Width="51">
                         
 
-                <MenuItem Header="Сгенерировать массив" ToolTip="Диапазон генерации от -10 до 2" Click="Mass_Click" ></MenuItem>
+                <MenuItem Header="Сгенерировать массив" ToolTip="Диапазон генерации от 0 до количества цифр в массиве" Click="Mass_Click" ></MenuItem>
 
                 <MenuItem Header="Изменить массив" ToolTip="Находит максимальное значение" Click="MaxValue_Click" ></MenuItem>
 
